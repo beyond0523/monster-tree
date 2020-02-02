@@ -27,13 +27,27 @@ module.exports = {
       },
       // 处理样式文件
       {
-        test: /\.(css|less)$/,
+        test: /\.(css)$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader"
+          }
+        ]
+      },
+      {
+        test: /\.(less)$/,
         use: [
           "style-loader",
           {
             loader: "css-loader"
           },
-          "less-loader"
+          {
+            loader: "less-loader",
+            options: {
+              javascriptEnabled: true
+            }
+          }
         ]
       }
     ]

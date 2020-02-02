@@ -9,7 +9,33 @@ module.exports = function(api) {
     // 编译ts
     '@babel/preset-typescript'
   ];
-  const plugins = [["@babel/plugin-proposal-class-properties", { "loose": true }]];
+  const plugins = [
+    ['@babel/plugin-proposal-class-properties', { loose: true }],
+    // [
+    //   'import',
+    //   {
+    //     libraryName: '@hz-components/react-base',
+    //     libraryDirectory: 'lib',
+    //     style: true
+    //   }
+    // ],
+    // [
+    //   'import',
+    //   {
+    //     libraryName: 'hz-components-tqt',
+    //     libraryDirectory: 'es',
+    //     style: true
+    //   }
+    // ]
+    [
+      'import',
+      {
+        libraryName: 'antd',
+        libraryDirectory: 'es',
+        style: true
+      }
+    ]
+  ];
 
   return {
     presets,

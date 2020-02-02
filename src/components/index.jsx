@@ -7,8 +7,8 @@ import TreeState from "../state/TreeState";
 
 import "react-virtualized/styles.css";
 
-const MIN_NUMBER_OF_PARENTS = 1;
-const MAX_NUMBER_OF_CHILDREN = 300;
+const MIN_NUMBER_OF_PARENTS = 5;
+const MAX_NUMBER_OF_CHILDREN = 100;
 const MAX_DEEPNESS = 4;
 
 const { Deletable, Expandable, Favorite } = Renderers;
